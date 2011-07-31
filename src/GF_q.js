@@ -14,6 +14,10 @@ GF = function(q){
 		return modulus;
 	}
 	
+	this.zero = function(){
+		return this.element(0);
+	}
+	
 	this.element = function(element){
 		var value = element['value'] ? element.value() : element % modulus;
 		if (typeof elements[value] === 'undefined') {

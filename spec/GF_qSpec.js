@@ -30,5 +30,11 @@ describe("GF(q)",function(){
 		it("should be normalized", function(){
 			expect(field.element(1)).toBe(field.element(6));
 		});
+		
+		describe("addition", function(){
+			it("should have a unit", function(){
+				expect(field.zero()).toBe(field.element(0));
+			});
+		});
 	});
 });
