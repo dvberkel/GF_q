@@ -1,5 +1,7 @@
-GF = function(){
+GF = function(q){
+	var modulus = q || 2;	
+	
 	this.modulus = function(){
-		return 2;
+		return modulus;
 	}
 }
