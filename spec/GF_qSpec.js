@@ -74,6 +74,13 @@ describe("GF(q)",function(){
 				var aInverted = field.element(3);
 				expect(a.inverse()).toBe(aInverted);
 			});
+			
+			it("should have an inverse operation", function(){
+				var a = field.element(2);
+				var b = field.element(4);
+				var dividend = field.element(-2); 
+				expect(a.divide(b)).toBe(dividend);
+			});
 		});
 	});
 });

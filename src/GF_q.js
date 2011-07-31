@@ -39,9 +39,13 @@ GF = function(q){
 		return this.element(this.value() * that.value());
 	}
 	
-	this.inverse = function() {
+	this.inverse = function(){
 		var _ = this.egcd(modulus,this.value());
 		return this.element(_[this.value()]);
+	}
+	
+	this.divide = function(that){
+		return this.times(that.inverse());
 	}
 	
 	this.element = function(element){
