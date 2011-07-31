@@ -39,11 +39,23 @@ GF = function(q){
 		return this.element(this.value() * that.value());
 	}
 	
+	this.inverse = function() {
+		var _ = this.egcd(this.modulus(),this.value());
+		return this.element(_[this.value()]);
+	}
+	
 	this.element = function(element){
-		var value = element['value'] ? element.value() : element % modulus;
+		var value = normalizedValue(element);
 		if (typeof elements[value] === 'undefined') {
 			elements[value] = new Element(value);
 		}
 		return elements[value];
 	}
+	
+	var normalizedValue = function(element) {
+		var value = element['value'] ? element.value() : element % modulus;
+		while (value < 0) { value += modulus }
+		return value;
+	}
 }
+GF.prototype = new GCD();

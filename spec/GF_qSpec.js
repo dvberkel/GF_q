@@ -45,8 +45,8 @@ describe("GF(q)",function(){
 			
 			it("should have an inverse element", function(){
 				var a = field.element(2);
-				var negated = field.element(3);
-				expect(a.opposite()).toBe(negated);
+				var aNegated = field.element(3);
+				expect(a.opposite()).toBe(aNegated);
 			});
 			
 			it("should have an inverse operation", function(){
@@ -67,6 +67,12 @@ describe("GF(q)",function(){
 				var b = field.element(4);
 				var product = field.element(2 * 4);
 				expect(a.times(b)).toBe(product);
+			});
+			
+			it("should have an inverse element", function(){
+				var a = field.element(2);
+				var aInverted = field.element(3);
+				expect(a.inverse()).toBe(aInverted);
 			});
 		});
 	});
