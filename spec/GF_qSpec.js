@@ -43,10 +43,17 @@ describe("GF(q)",function(){
 				expect(a.plus(b)).toBe(sum);
 			});
 			
-			it("should have an inverse", function(){
+			it("should have an inverse element", function(){
 				var a = field.element(2);
 				var negated = field.element(3);
 				expect(a.negate()).toBe(negated);
+			});
+			
+			it("should have an inverse operation", function(){
+				var a = field.element(2);
+				var b = field.element(4);
+				var difference = field.element(2 + (field.modulus() - 4));
+				expect(a.minus(b)).toBe(difference);
 			});
 		});
 		

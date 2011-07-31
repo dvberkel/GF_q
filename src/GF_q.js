@@ -27,6 +27,10 @@ GF = function(q){
 		return this.element(this.modulus() - this.value());
 	}
 	
+	this.minus = function(that){
+		return this.plus(that.negate());
+	}
+	
 	this.one = function(){
 		return this.element(1);
 	}
