@@ -36,5 +36,11 @@ describe("GF(q)",function(){
 				expect(field.zero()).toBe(field.element(0));
 			});
 		});
+		
+		describe("multiplication", function(){
+			it("should have a unit", function(){
+				expect(field.one()).toBe(field.element(1));
+			});
+		});
 	});
 });
