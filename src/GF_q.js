@@ -23,6 +23,10 @@ GF = function(q){
 		return this.element(this.value() + that.value());
 	}
 	
+	this.negate = function(){
+		return this.element(this.modulus() - this.value());
+	}
+	
 	this.one = function(){
 		return this.element(1);
 	}

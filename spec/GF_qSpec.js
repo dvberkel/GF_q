@@ -42,6 +42,12 @@ describe("GF(q)",function(){
 				var sum = field.element(2 + 4);
 				expect(a.plus(b)).toBe(sum);
 			});
+			
+			it("should have an inverse", function(){
+				var a = field.element(2);
+				var negated = field.element(3);
+				expect(a.negate()).toBe(negated);
+			});
 		});
 		
 		describe("multiplication", function(){
