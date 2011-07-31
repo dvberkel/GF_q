@@ -5,8 +5,12 @@ GF = function(q){
 	var Element = function(value){
 		var v = value;
 		
-		this.value = function() {
+		this.value = function(){
 			return v;
+		}
+		
+		this.toString = function(){
+			return "[" + value + "]_(" + this.modulus() + ")";
 		}
 	};
 	Element.prototype = this;
