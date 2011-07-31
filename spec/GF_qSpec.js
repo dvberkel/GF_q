@@ -19,12 +19,16 @@ describe("GF(q)",function(){
 		var field = new GF();
 		expect(field.element(1)).toBe(field.element(1));
 	});
-	
+		
 	describe("element", function(){
 		var field = new GF(5);
 		
 		it("should have a value", function(){
 			expect(field.element(0).value()).toBe(0);
+		});
+		
+		it("should be normalized", function(){
+			expect(field.element(1)).toBe(field.element(6));
 		});
 	});
 });

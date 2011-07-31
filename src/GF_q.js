@@ -15,7 +15,7 @@ GF = function(q){
 	}
 	
 	this.element = function(element){
-		var value = element['value'] ? element.value() : element;
+		var value = element['value'] ? element.value() : element % modulus;
 		if (typeof elements[value] === 'undefined') {
 			elements[value] = new Element(value);
 		}
