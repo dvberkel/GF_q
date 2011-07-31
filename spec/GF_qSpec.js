@@ -14,4 +14,9 @@ describe("GF(q)",function(){
 	it("should create elements", function(){
 		expect((new GF()).element(0)).toBeDefined();
 	});
+	
+	it("should create identical elements", function(){
+		var field = new GF();
+		expect(field.element(1)).toBe(field.element(1));
+	});
 });
