@@ -24,7 +24,7 @@ GF = function(q){
 	}
 	
 	this.opposite = function(){
-		return this.element(this.modulus() - this.value());
+		return this.element(modulus - this.value());
 	}
 	
 	this.minus = function(that){
@@ -40,7 +40,7 @@ GF = function(q){
 	}
 	
 	this.inverse = function() {
-		var _ = this.egcd(this.modulus(),this.value());
+		var _ = this.egcd(modulus,this.value());
 		return this.element(_[this.value()]);
 	}
 	
