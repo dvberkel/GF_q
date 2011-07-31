@@ -31,9 +31,16 @@ describe("GF(q)",function(){
 			expect(field.element(1)).toBe(field.element(6));
 		});
 		
-		describe("addition", function(){
+		describe("addition", function(){			
 			it("should have a unit", function(){
 				expect(field.zero()).toBe(field.element(0));
+			});
+			
+			it("should operate on other element", function(){
+				var a = field.element(2);
+				var b = field.element(4);
+				var sum = field.element(2 + 4);
+				expect(a.plus(b)).toBe(sum);
 			});
 		});
 		

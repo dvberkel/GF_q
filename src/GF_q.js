@@ -9,6 +9,7 @@ GF = function(q){
 			return v;
 		}
 	};
+	Element.prototype = this;
 	
 	this.modulus = function(){
 		return modulus;
@@ -16,6 +17,10 @@ GF = function(q){
 	
 	this.zero = function(){
 		return this.element(0);
+	}
+	
+	this.plus = function(that){
+		return this.element(this.value() + that.value());
 	}
 	
 	this.one = function(){
