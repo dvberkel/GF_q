@@ -23,12 +23,12 @@ GF = function(q){
 		return this.element(this.value() + that.value());
 	}
 	
-	this.negate = function(){
+	this.opposite = function(){
 		return this.element(this.modulus() - this.value());
 	}
 	
 	this.minus = function(that){
-		return this.plus(that.negate());
+		return this.plus(that.opposite());
 	}
 	
 	this.one = function(){
