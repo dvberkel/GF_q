@@ -27,6 +27,10 @@ GF = function(q){
 		return this.element(1);
 	}
 	
+	this.times = function(that){
+		return this.element(this.value() * that.value());
+	}
+	
 	this.element = function(element){
 		var value = element['value'] ? element.value() : element % modulus;
 		if (typeof elements[value] === 'undefined') {

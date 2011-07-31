@@ -48,6 +48,13 @@ describe("GF(q)",function(){
 			it("should have a unit", function(){
 				expect(field.one()).toBe(field.element(1));
 			});
+			
+			it("should operate on other element", function(){
+				var a = field.element(2);
+				var b = field.element(4);
+				var product = field.element(2 * 4);
+				expect(a.times(b)).toBe(product);
+			});
 		});
 	});
 });
