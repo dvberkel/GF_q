@@ -10,4 +10,8 @@ describe("GF(q)",function(){
 	it("should accept a different modulus", function(){
 		expect((new GF(3)).modulus()).toBe(3);
 	});
+	
+	it("should create elements", function(){
+		expect((new GF()).element(0)).toBeDefined();
+	});
 });

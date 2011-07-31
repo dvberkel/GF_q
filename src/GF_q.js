@@ -4,4 +4,8 @@ GF = function(q){
 	this.modulus = function(){
 		return modulus;
 	}
+	
+	this.element = function(element){
+		return element;
+	}
 }
